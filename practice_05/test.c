@@ -1,10 +1,9 @@
 #define _CRT_SECURE_NO_WARNINGS 1
 #include <stdio.h>
-int Add(num1, num2) 
+int Add(int x, int y) 
 {
-	int x= num1;
-	int y= num2;
-	int z = x + y;
+	int z = 0;
+	z = x + y;
 	return z;
 }
 int main()

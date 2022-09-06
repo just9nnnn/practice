@@ -3,6 +3,7 @@
 int main()
 {
 	int day = 0;
+	printf("输入1-7,查看:>");
 	scanf("%d", &day);
 	switch (day)
 	{
@@ -26,6 +27,9 @@ int main()
 		break;
 	case 7:
 		printf("星期天\n");
+		break;
+	default:
+		printf("输入错误\n");
 		break;
 	}
 	return 0;

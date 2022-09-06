@@ -3,11 +3,11 @@
 int main()
 {
 	int a = 0;
-	printf("输入一个数，判断是否为奇数:>");
+	printf("输入一个数，判断奇偶:>");
 	scanf("%d", &a);
 	if (0 == a % 2)
-		printf("NO");
+		printf("偶数\n");
 	else
-		printf("YES");
+		printf("奇数\n");
 	return 0;
 }

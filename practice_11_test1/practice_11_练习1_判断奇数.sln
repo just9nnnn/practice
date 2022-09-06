@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.3.32819.101
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "practice_11_练习1_判断奇数", "practice_11_练习1_判断奇数.vcxproj", "{0F00DEA9-1BE4-4502-BAED-E9EAA067DF9C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0F00DEA9-1BE4-4502-BAED-E9EAA067DF9C}.Debug|x64.ActiveCfg = Debug|x64
+		{0F00DEA9-1BE4-4502-BAED-E9EAA067DF9C}.Debug|x64.Build.0 = Debug|x64
+		{0F00DEA9-1BE4-4502-BAED-E9EAA067DF9C}.Debug|x86.ActiveCfg = Debug|Win32
+		{0F00DEA9-1BE4-4502-BAED-E9EAA067DF9C}.Debug|x86.Build.0 = Debug|Win32
+		{0F00DEA9-1BE4-4502-BAED-E9EAA067DF9C}.Release|x64.ActiveCfg = Release|x64
+		{0F00DEA9-1BE4-4502-BAED-E9EAA067DF9C}.Release|x64.Build.0 = Release|x64
+		{0F00DEA9-1BE4-4502-BAED-E9EAA067DF9C}.Release|x86.ActiveCfg = Release|Win32
+		{0F00DEA9-1BE4-4502-BAED-E9EAA067DF9C}.Release|x86.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {2568364A-F749-4C82-B263-5B7460FF12FB}
+	EndGlobalSection
+EndGlobal

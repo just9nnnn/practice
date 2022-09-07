@@ -3,15 +3,15 @@
 int main()
 {
 	int i = 0;
-	printf("ÊäÈëÒ»¸öÊıi£¬Çó<=iµÄÊıµÄ½×³ËµÄºÍ:>");
+	printf("è¾“å…¥ä¸€ä¸ªæ•°iï¼Œæ±‚<=içš„æ•°çš„é˜¶ä¹˜çš„å’Œ:>");
 	scanf("%d", &i);
 	int a = 1;
 	int b = 1;
 	int c = 0;
 	for(;b < i+1; b++)
 	{
-		a = a * b;
-		c = c + a;
+		a *= b;
+		c += a;
 	}
 	printf("%d", c);
 	return 0;

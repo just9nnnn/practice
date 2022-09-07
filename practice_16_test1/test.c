@@ -3,13 +3,13 @@
 int main()
 {
 	int i = 0;
-	printf("输入一个数，求它的阶乘:>");
+	printf("杈撳叆涓�涓暟锛屾眰瀹冪殑闃朵箻:>");
 	scanf("%d", &i);
 	int a = 1;
 	int b = 1;
 	for (; b < i+1; b++)
 	{
-		a = a * b;
+		a *= b;
 	}
 	printf("%d ", a);
 	return 0;

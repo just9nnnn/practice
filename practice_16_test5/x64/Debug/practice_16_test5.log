@@ -1,0 +1,3 @@
+﻿  test.c
+C:\Users\ls_lolfantastic\Desktop\code\practice_16_test5\test.c(10,27): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+  practice_16_test5.vcxproj -> C:\Users\ls_lolfantastic\Desktop\code\practice_16_test5\x64\Debug\practice_16_test5.exe

@@ -6,15 +6,17 @@ int main()
 	for (a = 100; a <= 200; a++)
 	{
 		int b = 0;
+		int test = 1;
 		for (b = 2; b < a; b++)
 		{
 			if (a % b == 0)
 			{
+				test = 0;
 				break;
 			}
 			
 		}	
-		if (a == b)
+		if (test == 1)
 		{
 			printf("%d ", a);
 		}

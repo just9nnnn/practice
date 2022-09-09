@@ -2,23 +2,25 @@
 #include <stdio.h>
 int main()
 {
-    int arr[] = { 77, 125666, 1, 855, 93, 6, 10000, 18, 777, 1000 };
-    int m = 0;
-    int n = 1;
-    int max = arr[m];
-    while (m <= 9 && n <= 9)
+    int arr[10] = { 0 };
+    int i = 0;
+    int max = 0;
+    int count = 0;
+    for (i = 0; i < 10; i++)
     {
-        if (arr[m] > arr[n])
+        printf("请输入10个数:>");
+        scanf("%d", &arr[i]);
+        count++;
+        printf("第%d个数\n",count);
+    }
+    max = arr[0];
+    for (i = 0; i < 10; i++)
+    {
+        if (arr[i] > max)
         {
-            n++;
-        }
-        else
-        {
-            max = arr[n];
-            m = n;
-            n = m + 1;
+            max = arr[i];
         }
     }
-    printf("最大的数是:>%d", max);
+    printf("max = %d",max);
     return 0;
 }

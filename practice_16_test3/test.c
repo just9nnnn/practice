@@ -10,11 +10,11 @@ int main()
 	while (left <= right)
 	{
 		int mid = (left + right) / 2;
-		if (mid < k - 1)
+		if (arr[mid] < k)
 		{
 			left = mid + 1;
 		}
-		else if (mid > k - 1)
+		else if (arr[mid] > k)
 		{
 			right = mid - 1;
 		}

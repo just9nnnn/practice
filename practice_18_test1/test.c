@@ -2,21 +2,15 @@
 #include <stdio.h>
 int test(int a)
 {
-    int b = 1;
-    for (b = 2; b < a;)
+    int b = 0;
+    for (b = 2; b < a; b++)
     {
-        if (a % b != 0)
-        {
-            b++;
-        }
-        else
+        if (a % b == 0)
         {
             return 0;
-            break;
         }
     }
-    if (a == b)
-        return 1;
+    return 1;
 }
 int main()
 {

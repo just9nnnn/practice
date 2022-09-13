@@ -200,7 +200,7 @@ void player_move(char board[Row][Col], int row, int col)
 	while(1)
 	{
 		printf("玩家走\n");
-		printf("请输入坐标:>");
+		printf("请输入坐标(格式x y):>");
 		scanf("%d %d", &x, &y);
 		if (x >= 1 && x <= row && y >= 1 && y <= col)
 		{
@@ -225,11 +225,11 @@ void player_move(char board[Row][Col], int row, int col)
 //电脑下棋
 void computer_move(char board[Row][Col], int row, int col)
 {
-	int x = rand()%row;
-	int y = rand()%col;
 	printf("电脑走\n");
 	while(1)
 	{
+		int x = rand() % row;
+		int y = rand() % col;
 		if (board[x][y] == ' ')
 		{
 			board[x][y] = 'X';

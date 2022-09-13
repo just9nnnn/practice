@@ -4,7 +4,7 @@
 int main()
 {
 	int input = 0;
-	srand((unsigned int)time);
+	srand((unsigned int)time(NULL));
 	do
 	{
 		menu();//´òÓ¡²Ëµ¥

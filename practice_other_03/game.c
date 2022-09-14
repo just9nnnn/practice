@@ -1,38 +1,38 @@
 #define _CRT_SECURE_NO_WARNINGS 1
 #include"game.h"
-//²Ëµ¥
+//èœå•
 void menu()
 {
 	printf("#########################\n");
-	printf("########  É¨À×.  ########\n");
-	printf("#######0.ÍË³öÓÎÏ·.#######\n");
-	printf("#######1.½øÈëÓÎÏ·.#######\n");
+	printf("########  æ‰«é›·.  ########\n");
+	printf("#######0.é€€å‡ºæ¸¸æˆ.#######\n");
+	printf("#######1.è¿›å…¥æ¸¸æˆ.#######\n");
 	printf("###Written by SQ Eggs.###\n");
 	printf("#########################\n");
 }
 
-//ÓÎÏ·½ø³Ì
+//æ¸¸æˆè¿›ç¨‹
 void game()
 {
-	//´´½¨
+	//åˆ›å»º
 	char mine[Rows][Cols] = { 0 };
 	char sweep[Rows][Cols] = { 0 };
 
-	//³õÊ¼»¯
+	//åˆå§‹åŒ–
 	Int_board(mine, Rows, Cols, '0');
 	Int_board(sweep, Rows, Cols, '#');
 
-	Print_board(sweep, Row, Col);//´òÓ¡
+	Print_board(sweep, Row, Col);//æ‰“å°
 
-	//²¼ÖÃÀ×
+	//å¸ƒç½®é›·
 	Set_mine(mine, Row, Col);
-	//Print_board(mine, Row, Col);//´òÓ¡
+	//Print_board(mine, Row, Col);//æ‰“å°
 
-	//É¨À×
+	//æ‰«é›·
 	Sweep_mine(mine, sweep, Row, Col);
 }
 
-//³õÊ¼»¯
+//åˆå§‹åŒ–
 void Int_board(char board[Rows][Cols], int rows, int cols, char set)
 {
 	int i = 0;
@@ -46,11 +46,11 @@ void Int_board(char board[Rows][Cols], int rows, int cols, char set)
 	}
 }
 
-//´òÓ¡
+//æ‰“å°
 void Print_board(char board[Rows][Cols], int row, int col)
 {
 	int i = 1;
-	printf("----------É¨À×----------\n");
+	printf("----------æ‰«é›·----------\n");
 	for (i = 0; i <= col; i++)
 	{
 		printf("%d ", i);
@@ -66,10 +66,10 @@ void Print_board(char board[Rows][Cols], int row, int col)
 		}
 		printf("\n");
 	}
-	printf("----------É¨À×----------\n");
+	printf("----------æ‰«é›·----------\n");
 }
 
-//²¼ÖÃÀ×
+//å¸ƒç½®é›·
 void Set_mine(char mine[Rows][Cols], int row, int col)
 {
 	int count = minenum;
@@ -85,7 +85,7 @@ void Set_mine(char mine[Rows][Cols], int row, int col)
 	}
 }
 
-//É¨À×
+//æ‰«é›·
 void Sweep_mine(char mine[Rows][Cols], char sweep[Rows][Cols], int row, int col)
 {
 	int x = 0;
@@ -93,13 +93,13 @@ void Sweep_mine(char mine[Rows][Cols], char sweep[Rows][Cols], int row, int col)
 	int count = 0;
 	while(row * col - minenum > count)
 	{
-		printf("ÇëÊäÈë×ø±ê:>");
+		printf("è¯·è¾“å…¥åæ ‡(æ ¼å¼:x y):>");
 		scanf("%d %d", &x, &y);
 		if (x >= 1 && x <= row && y >= 1 && y <= col)
 		{
 			if (mine[x][y] == '1')
 			{
-				printf("Äã²Èµ½À×ÁË,ÓÎÏ·½áÊø!\n");
+				printf("ä½ è¸©åˆ°é›·äº†,æ¸¸æˆç»“æŸ!\n");
 				Print_board(mine, Row, Col);
 				Sleep(5000);
 				system("cls");
@@ -111,24 +111,24 @@ void Sweep_mine(char mine[Rows][Cols], char sweep[Rows][Cols], int row, int col)
 				{
 					if(sweep[x][y] == '#')
 					{
-						Get_minenum(mine, sweep, x, y);//»ñµÃÊäÈë×ø±êÖÜÎ§À×µÄÊıÁ¿
+						Get_minenum(mine, sweep, x, y);//è·å¾—è¾“å…¥åæ ‡å‘¨å›´é›·çš„æ•°é‡
 						count++;
 					}
 					else
 					{
-						printf("¸Ã×ø±êÒÑ±»²é¿´,ÇëÖØĞÂÊäÈë:\n");
+						printf("è¯¥åæ ‡å·²è¢«æŸ¥çœ‹,è¯·é‡æ–°è¾“å…¥:\n");
 					}
 				}
 			}
 		}
 		else
 		{
-			printf("×ø±êÊäÈë´íÎó,ÇëÖØĞÂÊäÈë\n");
+			printf("åæ ‡è¾“å…¥é”™è¯¯,è¯·é‡æ–°è¾“å…¥\n");
 		}
 	}
 	if (count == row * col - minenum)
 	{
-		printf("¹§Ï²Äã»ñµÃ³É¹¦!\n");
+		printf("æ­å–œä½ è·å¾—æˆåŠŸ!\n");
 		Print_board(mine, Row, Col);
 		Sleep(5000);
 		system("cls");
@@ -136,7 +136,7 @@ void Sweep_mine(char mine[Rows][Cols], char sweep[Rows][Cols], int row, int col)
 
 }
 
-//»ñµÃ×ø±êÖÜÎ§À×µÄÊıÁ¿
+//è·å¾—åæ ‡å‘¨å›´é›·çš„æ•°é‡
 void Get_minenum(char mine[Rows][Cols], char sweep[Rows][Cols], int x, int y)
 {
 	int count = 0;

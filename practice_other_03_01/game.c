@@ -102,53 +102,52 @@ void Sweep_mine(char mine[Rows][Cols], char sweep[Rows][Cols], int row, int col)
 		{
 		case 1:
 		{
-			do
+			Print_board(sweep, Row, Col);
+			printf("----------扫雷----------:\n");
+			printf("请输入坐标(格式:x y):>");
+			scanf("%d %d", &x, &y);
+			if (x >= 1 && x <= row && y >= 1 && y <= col)
 			{
-				Print_board(sweep, Row, Col);
-				printf("----------扫雷----------:\n");
-				printf("请输入坐标(格式:x y):>");
-				scanf("%d %d", &x, &y);
-				if (x >= 1 && x <= row && y >= 1 && y <= col)
+				if (mine[x][y] == '1')
 				{
-					if (mine[x][y] == '1')
-					{
-						printf("你踩到雷了,游戏结束!\n");
-						Print_board(mine, Row, Col);
-						Sleep(5000);
-						system("cls");
-						break;
-					}
-					else
-					{
-						if (mine[x][y] == '0')
-						{
-							if (sweep[x][y] == '#')
-							{
-								Get_minenum(mine, sweep, x, y);//获得输入坐标周围雷的数量
-								Print_board(sweep, Row, Col);
-								count = count_sweep(sweep, Row, Col);//sweep中'#'的数量
-							}
-							else
-							{
-								printf("该坐标已被查看,请重新输入:\n");
-							}
-						}
-					}
-				}
-				else
-				{
-					printf("坐标输入错误,请重新输入\n");
-				}
-				if (count == minenum)
-				{
-					printf("恭喜你获得成功!\n");
+					printf("你踩到雷了,游戏结束!\n");
 					Print_board(mine, Row, Col);
 					Sleep(5000);
 					system("cls");
+					n = 0;
 					break;
 				}
-			} while (row * col - minenum > row * col - count);
-			n = 0;
+				else
+				{
+					if (mine[x][y] == '0')
+					{
+						if (sweep[x][y] == '#')
+						{
+							Get_minenum(mine, sweep, x, y);//获得输入坐标周围雷的数量
+							Print_board(sweep, Row, Col);
+							printf("\n");
+							count = count_sweep(sweep, Row, Col);//sweep中'#'的数量
+						}
+						else
+						{
+							printf("该坐标已被查看,请重新输入:\n");
+						}
+					}
+				}
+			}
+			else
+			{
+				printf("坐标输入错误,请重新输入\n");
+			}
+			if (count == minenum)
+			{
+				printf("恭喜你获得成功!\n");
+				Print_board(mine, Row, Col);
+				Sleep(5000);
+				system("cls");
+				n = 0;
+				break;
+			}
 			break;
 		}
 		case 2:
@@ -207,7 +206,6 @@ void Sweep_mine(char mine[Rows][Cols], char sweep[Rows][Cols], int row, int col)
 				break;
 			}
 			else
-				printf("\n没有标记可以取消\n\n");
 				break;
 		}
 		default:

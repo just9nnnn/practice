@@ -207,6 +207,7 @@ void Sweep_mine(char mine[Rows][Cols], char sweep[Rows][Cols], int row, int col)
 				break;
 			}
 			else
+				printf("\n没有标记可以取消\n\n");
 				break;
 		}
 		default:

@@ -165,6 +165,7 @@ void Sweep_mine(char mine[Rows][Cols], char sweep[Rows][Cols], int row, int col)
 					{
 						sweep[x][y] = 'O';
 						Print_board(sweep, Row, Col);
+						printf("\n");
 						break;
 					}
 					else
@@ -194,6 +195,7 @@ void Sweep_mine(char mine[Rows][Cols], char sweep[Rows][Cols], int row, int col)
 						{
 							sweep[x][y] = '#';
 							Print_board(sweep, Row, Col);
+							printf("\n");
 							break;
 						}
 						else
@@ -206,6 +208,7 @@ void Sweep_mine(char mine[Rows][Cols], char sweep[Rows][Cols], int row, int col)
 				break;
 			}
 			else
+				printf("没有标记,无法取消\n\n");
 				break;
 		}
 		default:
